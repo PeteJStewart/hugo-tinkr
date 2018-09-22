@@ -1,0 +1,68 @@
+@mixin button-variant($font-color, $bg-color) {
+  color: $font-color;
+  background-color: $bg-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $font-color;
+    background-color: lighten($bg-color, 5%);
+  }
+
+  &[disabled] {
+    &:hover,
+    &:focus,
+    &:active {
+      color: $font-color;
+      background-color: $bg-color;
+    }
+  }
+}
+
+@mixin button-flat-variant($font-color, $bg-color-hover) {
+  &.mui-btn--flat {
+    color: $font-color;
+    background-color: transparent;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $font-color;
+      background-color: $bg-color-hover;
+    }
+
+    &[disabled] {
+      &:hover,
+      &:focus,
+      &:active {
+        color: $font-color;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+@mixin button-ghost-variant($font-color, $bg-color-hover) {
+  &.mui-btn--ghost {
+    color: $font-color;
+    background-color: transparent;
+    border: 2px solid;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $font-color;
+      background-color: $bg-color-hover;
+    }
+
+    &[disabled] {
+      &:hover,
+      &:focus,
+      &:active {
+        color: $font-color;
+        background-color: transparent;
+      }
+    }
+  }
+}

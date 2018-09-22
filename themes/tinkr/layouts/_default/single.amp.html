@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html amp>
+    {{ partial "head.html" . }}
+    <body>
+        {{ partial "header.html" . }}
+        <main id="content">
+        {{ .Content }}
+        </main>
+        {{ block "foot" . }}
+            {{ partial "footer.html" . }}
+        {{ end }}
+    </body>
+</html>

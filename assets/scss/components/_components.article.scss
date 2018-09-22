@@ -1,0 +1,103 @@
+////
+/// @group components
+/// @author Pete Stewart
+////
+
+/// The `.c-article` component is used for the article list page (/articles)
+/// and article list blocks, such as the home page articles section.
+/// @todo Move block modifier to list root.
+/// @example markup
+///     <section class="c-article__list">
+///         <article class="c-article__item c-article__item--block">
+///             <time class="c-article__pubdate" datetime="2018-04-10 20:51:31">Apr 10th, 2018</time>
+///             <h4 class="c-article__title"><a href="..." class="c-article__link">Article Title</a></h4>
+///         </article>
+///     </section>
+
+.c-article {
+  overflow: hidden;
+  margin-top: 16px; 
+  @include mq($until: desktop) {
+    padding: 0;
+  }
+  &__list {
+    padding-bottom: 20px;
+  }
+
+  &__item {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px 0;
+
+    &--block {
+      border-bottom: 1px solid rgba(0,0,0,0.2);;
+    }
+  }
+
+  &__title {
+    margin-top: 5px; 
+  }
+
+  &__link {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__img {
+    margin: auto;
+    width: 100%;
+  }
+
+  &__title {
+    //@extend .u-color--orange;
+    color: rgba( 0, 0, 0, 0.8);
+    font-family: 'Noto Serif JP', sans-serif;
+    @include mq($from: desktop) {
+      font-size: 50px;
+    }
+    font-weight: 700;
+  }
+
+  &__header, &__author {
+    @include mq($until: desktop) {
+      padding-right: $inuit-global-spacing-unit;
+      padding-left:  $inuit-global-spacing-unit;
+    }
+  }
+
+  &__body {
+    p {
+      font-family: 'Noto Serif JP', sans-serif;
+      font-weight: 500;
+    }
+    p, ol, ul {
+      @include mq($from: desktop) {
+        font-size: 20px;
+      }
+      line-height: 1.5;
+      color: rgba( 0, 0, 0, 0.8);
+    }
+
+    > * {
+      @include mq($until: desktop) {
+        padding-right: $inuit-global-spacing-unit / 2;
+        padding-left:  $inuit-global-spacing-unit / 2;
+      }
+    }
+  }
+
+  &__excerpt {
+
+    margin: 5px auto;
+    &--italic {
+      font-style: italic;
+    }
+  }
+
+  &__pubdate {
+    font-style: italic;
+  }
+}

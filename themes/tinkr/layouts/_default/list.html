@@ -1,0 +1,25 @@
+{{ define "main" }}
+<div class="o-wrapper">
+    <section class="c-article__list">
+        <article class="c-article__item o-media">
+            {{ range .Pages }} 
+            {{ with .Param "image" }}
+            <a href="{{ .URL }}" class="c-article__link o-media__img">
+                <img src="{{ .src }}" />
+            </a>
+            {{ end }}
+            <div class="o-media__body">
+                <h2 class="c-article__title"><a href="{{ .URL }}" class="c-article__link">{{ .Title }}</a></h2>
+                <p class="c-article__excerpt">
+                {{ with .Param "description" }}
+                {{ . }}
+                {{ else }}
+                {{ .Summary }}
+                {{ end }}</p>
+                <time class="c-article__pubdate" datetime="{{ .PublishDate.Format "2006-01-02 15:04:05" }}">{{ .PublishDate.Format "02 Jan, 2006" }}</time>
+            </div>
+            {{ end }}
+        </article>
+    </section>
+</div>
+{{ end }}

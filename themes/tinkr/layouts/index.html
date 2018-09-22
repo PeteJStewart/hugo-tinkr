@@ -1,0 +1,50 @@
+{{ define "main" }}
+<div class="o-wrapper"> 
+    <section class="o-layout"> 
+        {{ with .Site.GetPage "/service" }}
+        {{ with .GetPage "website-performance-consultancy.md" }}{{ partial "components/service.html" . }}{{ end }}
+        {{ with .GetPage "code-review.md" }}{{ partial "components/service.html" . }}{{ end }}
+        {{ with .GetPage "optimisation.md" }}{{ partial "components/service.html" . }}{{ end }}
+        {{ end }}
+        <div class="o-layout__item u-1/1">
+            <p class="c-services__body">
+            <a class="mui-btn mui-btn--primary mui-btn--ghost c-services__btn" href="/service">Services</a> 
+            <a class="mui-btn mui-btn--primary c-services__btn" href="/contact">Hire Me</a></p>
+        </div>
+    </section>
+</div>
+<section class="c-clients">
+    <header class="o-wrapper c-clients__header">
+        <h2 class="c-clients__title">Clients</h2>
+    </header>
+    <div class="o-wrapper c-clients__logos">
+    {{ range $.Site.Data.clients }}
+    {{ $logo := print "/img/clients/" .Logo }}
+    <a href="{{ .URL }}" target="_blank" class="c-clients__link" rel="noopener"><img src="{{ $logo }}" class="c-clients__img" alt="{{ .Name }} logo"></a>
+    {{ end }}
+</section>
+<div class="o-wrapper"> 
+    <div class="o-layout">
+        <section class="o-layout__item u-1/1 u-1/2@tablet c-contact" data-animateonview="true">
+            <div class="mui-panel">
+                <h2 class="c-contact__title">Contact Me</h2>
+                <address class="c-contact__address h-card">
+                    <p>Hi, my name is <span class="p-name">Pete Stewart<span>, if you want to get in touch about a project, please send me an email: <a class="" href="mailto:hey@tinkr.co.uk">hey@tinkr.co.uk</a></span></span></p>
+                    <p>Otherwise you can find me on Twitter <a href="https://twitter.com/pj_stew">@pj_stew</a>, <a href="https://www.linkedin.com/in/pjstew/">Linkedin</a>, and a few other social networks.</p>
+                </address>
+                <p>For monthly updates from my website about digital development, please join my enews letter!</p>
+                <a class="mui-btn mui-btn--primary" href="http://eepurl.com/ds4vEb">Join my enews</a>
+            </div>
+        </section>
+        <section class="o-layout__item u-1/1 u-1/2@tablet c-article c-article__list" data-animateonview="true">
+            <h2>Articles</h2>
+            {{ range first 5 (where .Data.Pages "Type" "article") }}
+            <article class="c-article__item c-article__item--block">
+                <time class="c-article__pubdate" datetime="{{ .PublishDate.Format "2006-01-02 15:04:05" }}">{{ .PublishDate.Format "02 Jan, 2006" }}</time> 
+                <h3><a href="{{ .URL }}" class="c-article__link">{{ .Title }}</a></h3>
+            </article>
+            {{ end }}
+        </section>
+    </div>
+</div>
+{{ end }}

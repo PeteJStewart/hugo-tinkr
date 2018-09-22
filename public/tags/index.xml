@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Tinkr Digital Development &amp; Performance</title>
+    <link>https://tinkr.co.uk/tags/</link>
+    <description>Recent content in Tags on Tinkr Digital Development &amp; Performance</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    
+	<atom:link href="https://tinkr.co.uk/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Web Perf</title>
+      <link>https://tinkr.co.uk/tags/web-perf/</link>
+      <pubDate>Mon, 17 Sep 2018 13:56:19 +0100</pubDate>
+      
+      <guid>https://tinkr.co.uk/tags/web-perf/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

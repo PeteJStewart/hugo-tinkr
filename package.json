@@ -1,0 +1,29 @@
+{
+    "name": "tinkr",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {
+        "inuitcss": "^6.0.0"
+    },
+    "devDependencies": {
+        "autoprefixer": "^9.1.5",
+        "cssnano": "^4.1.0",
+        "html-minifier": "^3.5.20",
+        "hugo-bin": "^0.30.0",
+        "node-sass": "^4.9.3",
+        "nodemon": "^1.18.4",
+        "postcss": "^7.0.2"
+    },
+    "scripts": {
+        "go": "npm run hugo:server",
+        "hugo:server": "snap run hugo server --buildDrafts --buildFuture",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build:prod": "npm run theme:build && snap run hugo && npm run optimize:html",
+        "optimize:html": "./node_modules/.bin/html-minifier --input-dir ./public/ --output-dir ./public/ --file-ext html -c ./.html-minifier-config.json",
+        "theme:build": "node ./.bin/styling",
+        "theme:watch": "./node_modules/.bin/nodemon -e scss -w ./ -x npm run theme:build"
+    },
+    "author": "Pete Stewart",
+    "license": "ISC"
+}

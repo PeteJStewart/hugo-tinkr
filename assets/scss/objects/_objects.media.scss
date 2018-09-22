@@ -1,0 +1,175 @@
+////
+/// @group objects
+/// @author Nicole Sullivan
+/// @author Harry Roberts
+/// @link http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+////
+
+
+/* ==========================================================================
+   #MEDIA
+   ========================================================================== */
+
+/**
+ * Place any image- and text-like content side-by-side, as per:
+ * http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ */
+
+/// I've changed this to use a non-!important clearfix so it can be used in in AMP.
+/// It seemed to me that the specificity was such that !important wasn't required.
+/// This media object originally comes from Nicole Sullivan and was then used in InuitCSS by Harry Roberts.
+/// I am using InuitCSS framework in this project with some minor alterations for Google AMP.
+/// The `.o-media` class is used with `.o-media` and `.o-media__body` to give a reusable img/body floated display.
+/// @author Nicole Sullivan
+/// @author Harry Roberts
+/// @author Pete Stewart
+/// @example markup
+///     <div class="o-media">
+///         <img class="o-media__img" src="..." />
+///         <p class="o-media__body">...</p>
+///     </div>
+
+.o-media {
+  @include mui-clearfix();
+  display: block;
+}
+
+/// The `.o-media__img` class is to be used within `.o-media` and alongside `.o-media__body`
+
+.o-media__img {
+    float: left;
+    margin-right: $inuit-global-spacing-unit;
+
+    > img {
+        display: block;
+    }
+
+}
+
+
+/// The `.o-media__body` class is to be used within `.o-media` and alongside `.o-media__img`
+
+.o-media__body {
+    overflow: hidden;
+    display: block;
+
+    &,
+    > :last-child {
+        margin-bottom: 0;
+    }
+
+}
+
+
+
+
+
+/* Size variants.
+========================================================================== */
+
+
+
+/* Gutterless media objects.
+========================================================================== */
+
+/// Modify the amount of space between our image and our text. We also have
+/// reversible options for all available sizes.
+/// `.o-media--flush` removes all margins
+
+.o-media--flush {
+
+    > .o-media__img {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+}
+
+/// `.o-media--tiny` adds small margins
+/// @see $inuit-global-spacing-unit-tiny
+
+.o-media--tiny {
+
+    > .o-media__img {
+        margin-right: $inuit-global-spacing-unit-tiny;
+    }
+
+    &.o-media--reverse {
+
+        > .o-media__img {
+            margin-right: 0;
+            margin-left: $inuit-global-spacing-unit-tiny;
+        }
+
+    }
+
+}
+
+
+.o-media--small {
+
+    > .o-media__img {
+        margin-right: $inuit-global-spacing-unit-small;
+    }
+
+    &.o-media--reverse {
+
+        > .o-media__img {
+            margin-right: 0;
+            margin-left: $inuit-global-spacing-unit-small;
+        }
+
+    }
+
+}
+
+
+.o-media--large {
+
+    > .o-media__img {
+        margin-right: $inuit-global-spacing-unit-large;
+    }
+
+    &.o-media--reverse {
+
+        > .o-media__img {
+            margin-right: 0;
+            margin-left: $inuit-global-spacing-unit-large;
+        }
+
+    }
+
+}
+
+
+.o-media--huge {
+
+    > .o-media__img {
+        margin-right: $inuit-global-spacing-unit-huge;
+    }
+
+    &.o-media--reverse {
+
+        > .o-media__img {
+            margin-right: 0;
+            margin-left: $inuit-global-spacing-unit-huge;
+        }
+
+    }
+
+}
+
+
+
+/* Reversed media objects.
+========================================================================== */
+
+.o-media--reverse {
+
+    > .o-media__img {
+        float: right;
+        margin-right: 0;
+        margin-left: $inuit-global-spacing-unit;
+    }
+
+}

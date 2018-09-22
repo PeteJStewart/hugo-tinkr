@@ -1,0 +1,8 @@
+.c-contact {
+    
+    &__description {
+        &:after {
+            clear: left;
+        }
+    }
+}

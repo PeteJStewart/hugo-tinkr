@@ -1,0 +1,9 @@
+{{ define "main" }}
+<div class="o-wrapper">
+    <section class="o-layout">
+        {{ range .Pages }}
+        {{ partial "components/service.html" . }}
+        {{ end }}
+    </section>
+</div>
+{{ end }}

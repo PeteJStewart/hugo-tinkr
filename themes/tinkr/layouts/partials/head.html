@@ -1,0 +1,25 @@
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <title>{{ .Title }}</title>
+    <link rel="stylesheet" href="/css/main.min.css">
+    {{ range .Params.styles }}
+    <link rel="stylesheet" href="{{ . }}">
+    {{ end }}
+    <meta name="description" content="{{ block "description" . }}{{ .Params.description }}{{ end }}">
+    {{ range .Site.Params.preconnect }}<link rel="preconnect" href="{{ . }}">
+    {{ end }}{{ range .Site.Params.dns_prefetch }}<link rel="dns-prefetch" href="{{ . }}">
+    {{ end }}{{ range .AlternativeOutputFormats -}}
+    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+    {{ end -}}
+    <link rel="apple-touch-icon" sizes="180x180" href="//cdn.tinkr.co.uk/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="//cdn.tinkr.co.uk/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="//cdn.tinkr.co.uk/favicon-16x16.png">
+    <link rel="mask-icon" href="//cdn.tinkr.co.uk/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="apple-mobile-web-app-title" content="Tinkr">
+    {{ if .Site.Params.app_name }}<meta name="application-name" content="{{ .Site.Params.app_name }}">{{ end }}
+    {{ if .Site.Params.tile_color }}<meta name="msapplication-TileColor" content="{{ .Site.Params.tile_color }}">{{ end }} 
+    {{ if .Site.Params.theme_color }}<meta name="theme-color" content="{{ .Site.Params.theme_color }}">{{ end }}
+    <link rel="manifest" href="/manifest.json">
+</head>

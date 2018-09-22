@@ -1,0 +1,74 @@
+// This is the start of the animation CSS.
+$transition-time: 2s;
+$transition-function: ease;
+.i-amphtml-singledoc [data-animateonview="true"] > * {
+  transition-duration: $transition-time; 
+  transition-function: $transition-function; 
+}
+.u-animate {
+  & > * {
+    transition-duration: $transition-time; 
+    transition-function: $transition-function; 
+  }
+  &--slidein {
+    &-left, &-right {
+      transition-property: margin-left;
+    }
+    &-left {
+      margin-left: 100%;
+    }
+    &-right {
+      margin-left: -100%;
+    }
+  }
+  
+  & > &--slidein {
+    &-left, &-right {
+      margin-left: 0;
+    }
+  }
+ 
+  &--fadein {
+    transition-property: opacity;
+    opacity: 0;
+    &-bottom {
+      transition: opacity $transition-time, margin-bottom $transition-time / 3;
+      opacity: 0;
+      margin-bottom: -50px;
+    }
+    &-top {
+      transition: opacity $transition-time, margin-top $transition-time / 3;
+      opacity: 0;
+      margin-top: -20px;
+    }
+    &-left {
+      transition: opacity $transition-time, margin-left $transition-time / 3;
+      opacity: 0;
+      margin-left: 75%;
+    }
+  }
+  
+   .i-amphtml-singledoc [data-animateonview="true"] > &--fadein, & > &--fadein {
+    &, &-bottom, &-top, &-left {
+        opacity: 1;
+    }
+    &-bottom {
+      margin-bottom: 0;
+    }
+    &-top {
+      margin-top: 0;
+    }
+    &-left {
+      margin-left: 0;
+    }
+  }
+  
+  .i-amphtml-singledoc [data-animateonview="true"] > &__delay, & > &__delay {
+    @for $i from 1 through 10 {
+      &--#{$i}00ms {
+        $delay: $i * 100ms;
+        transition-delay: $delay;
+      } 
+    }
+  }
+}

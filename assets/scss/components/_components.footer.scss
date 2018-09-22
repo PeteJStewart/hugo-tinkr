@@ -1,0 +1,22 @@
+$footer-height: 150px;
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+main {
+    margin-bottom: $footer-height;
+}
+
+.c-footer {
+	background-color: #333;
+    @if $amp == false {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    height: $footer-height;
+    width: 100%;
+    overflow: hidden;    
+}

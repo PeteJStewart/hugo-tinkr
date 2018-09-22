@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Articles on Tinkr Digital Development &amp; Performance</title>
+    <link>https://tinkr.co.uk/article/</link>
+    <description>Recent content in Articles on Tinkr Digital Development &amp; Performance</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 22 Sep 2018 08:06:03 +0100</lastBuildDate>
+    
+	<atom:link href="https://tinkr.co.uk/article/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Importance of Documentation</title>
+      <link>https://tinkr.co.uk/article/the-importance-of-documentation/</link>
+      <pubDate>Sat, 22 Sep 2018 08:06:03 +0100</pubDate>
+      
+      <guid>https://tinkr.co.uk/article/the-importance-of-documentation/</guid>
+      <description>Properly documenting a project is an often debated subject, as developers, quite rightly want to focus on development, and feel another developer could understand their code if they were to read through it. In an ideal world where all developers are equally skilled and have plenty of time to read through the whole project codebase, this would be fine.
+In the real world, this is usually not the case. Developers all have different levels of skill and experience, and usually have a time schedule to stick to, so can’t always read through many lines of code.</description>
+    </item>
+    
+    <item>
+      <title>Website Performance</title>
+      <link>https://tinkr.co.uk/article/website-performance/</link>
+      <pubDate>Mon, 17 Sep 2018 13:56:19 +0100</pubDate>
+      
+      <guid>https://tinkr.co.uk/article/website-performance/</guid>
+      <description>For more information on the impact load time can have on overall website performance, take a look at the following infographic created by skilled.co: https://skilled.co/wp-content/uploads/2016/11/Website-speed_Infographic_Skilled_Final.jpg
+How long it takes for a website to load or at least for the user to perceive it has loaded, and for them to be able to use the site, comes down to a few basic factors:
+ Assets (the content and the code that defines the style and functionality of the site) Rendering (how this code is generated, whether that be dynamically or statically) Delivery (where this code is coming from and how it is being sent)  Asset Development Optimisation of website assets is often the largest issue when looking at website performance.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+///* ========================================================================
+//   #GLOBAL
+//   ======================================================================== */
+
+// The global settings file contains any project-wide variables; things that
+// need to be made available to the entire codebase.
+
+////
+/// @group settings
+////
+
+// Standardise some UI treatments.
+
+$global-radius: 3px !default;
+
+$global-transition: all 300ms ease-in-out !default;
+
+/// Primary colour
+$global-primary-color: #327BAF; 
+
+/// Primary colour darkened 10%
+$global-primary-color-dark: darken($mui-primary-color, 10%);
+
+/// Primary colour lightened 10%
+$global-primary-color-light: lighten($mui-primary-color, 10%);
+

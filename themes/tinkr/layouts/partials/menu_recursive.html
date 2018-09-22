@@ -1,0 +1,24 @@
+<!-- layouts/partials/menu_recursive.html -->
+{{ $page := .page }}
+{{ $site := .site }}
+{{ $class := .class }}
+{{ $toggle := .toggle }}
+<nav class="{{ $class }}">
+    {{ if $toggle }}<div class="c-main-nav__toggle">
+        <label for="main-menu" class="c-main-nav__text">menu</label>
+        <input id="main-menu" class="c-main-nav__checkbox" type="checkbox">
+        <span class="c-main-nav__bar"></span>
+        <span class="c-main-nav__bar"></span>
+        <span class="c-main-nav__bar"></span>{{ end }}
+        <ul class="{{ $class }}__list">{{ range .menu }}{{ $is := $page.IsMenuCurrent "main" . }}{{ $has := $page.HasMenuCurrent "main" . }}{{ if .HasChildren }} 
+            <li class="{{ $class }}__item">
+                <a class="{{ $class }}__link{{ if $is }} active{{ end }}" href="{{ .URL }}">{{ .Name }}{{ if .HasChildren }}[Children]{{ end }}</a>
+                <!-- If the menu item has children, include this partial template again (recursively) -->
+                {{ partial "menu_recursive.html" (dict "menu" .Children "page" $page "site" $site "class" $class "toggle" $toggle) }}
+            </li>{{ else }}
+            <li class="{{ $class }}__item{{ if $is }} {{ $class }}__item--active{{ end }}">
+                <a class="{{ $class }}__link" href="{{ .URL }}">{{ .Name }}{{ if .HasChildren }}[Children]{{ end }}</a>
+            </li>{{ end }}{{ end }}
+        </ul>
+        {{ if $toggle }}</div>{{ end }}
+</nav>

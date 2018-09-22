@@ -1,0 +1,14 @@
+{{ define "description" }}
+test
+{{ end }}
+
+{{ define "main" }}
+<div class="o-wrapper">
+    <section class="o-layout">
+        <article class="o-layout__item u-1/1 c-article">
+            <h1>{{ .Title }}</h1>
+            {{ .Content }}
+        </article>
+    </section>
+</div>
+{{ end }}

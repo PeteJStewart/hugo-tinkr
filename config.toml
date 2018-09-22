@@ -1,0 +1,48 @@
+baseURL = "https://tinkr.co.uk"
+languageCode = "en-gb"
+title = "Tinkr Digital Development & Performance"
+
+theme = "tinkr"
+
+[outputs]
+    home = [ "HTML", "AMP", "RSS"]
+    page = [ "HTML", "AMP", "RSS"]
+    section = [ "HTML", "AMP", "RSS"]
+    taxonomy = [ "HTML", "AMP", "RSS"]
+    taxonomyTerm = [ "HTML", "AMP", "RSS"]
+
+[params]
+    description = "Digital Development & Website Performance Speicalists"
+    theme_color = "#327BAF"
+    app_name = "Tinkr"
+    tile_color = "#2b5797"
+    dns_prefetch = [ "https://cdn.tinkr.co.uk", "https://cdn.jsdelivr.net" ]
+    preconnect = [ "https://cdn.tinkr.co.uk", "https://cdn.jsdelivr.net" ]
+        
+
+[[menu.main]]
+    name = "Home"
+    pre = "<i class='fa fa-heart'></i>"
+    weight = -110
+    identifier = "home"
+    url = "/"
+[[menu.main]]
+    name = "Services"
+    pre = "<i class='fa fa-road'></i>"
+    weight = -100
+    url = "/service/"
+[[menu.main]]
+    name = "Articles"
+    pre = "<i class='fa fa-road'></i>"
+    weight = -90
+    url = "/article/"
+[[menu.main]]
+    name = "About"
+    pre = "<i class='fa fa-road'></i>"
+    weight = -90
+    url = "/about/"
+[[menu.main]]
+    name = "Contact"
+    pre = "<i class='fa fa-road'></i>"
+    weight = -70
+    url = "/contact/"

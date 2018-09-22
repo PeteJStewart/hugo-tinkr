@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Digital Development on Tinkr Digital Development &amp; Performance</title>
+    <link>https://tinkr.co.uk/service/digital-development/</link>
+    <description>Recent content in Digital Development on Tinkr Digital Development &amp; Performance</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 19 Sep 2018 14:24:08 +0100</lastBuildDate>
+    
+	<atom:link href="https://tinkr.co.uk/service/digital-development/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

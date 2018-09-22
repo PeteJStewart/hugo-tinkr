@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Services on Tinkr Digital Development &amp; Performance</title>
+    <link>https://tinkr.co.uk/service/</link>
+    <description>Recent content in Services on Tinkr Digital Development &amp; Performance</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 19 Sep 2018 14:29:04 +0100</lastBuildDate>
+    
+	<atom:link href="https://tinkr.co.uk/service/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Responsive Design</title>
+      <link>https://tinkr.co.uk/service/responsive-design/</link>
+      <pubDate>Wed, 19 Sep 2018 14:29:04 +0100</pubDate>
+      
+      <guid>https://tinkr.co.uk/service/responsive-design/</guid>
+      <description>With mobile devices here to stay, responsive design is a must! Having worked with mobile for over 10 years, I start every projects mobile first and work up from there.
+For many years I&amp;rsquo;ve needed to explain what responsive design is, and why it&amp;rsquo;s necessary. Fortunately this rarely the case these days. In most cases now, if your website isn’t already responsive, you’re more likely to be approaching me to help make it responding, rather than asking me to explain what responsive design is.</description>
+    </item>
+    
+    <item>
+      <title>Website Performance Consultancy</title>
+      <link>https://tinkr.co.uk/service/website-performance-consultancy/</link>
+      <pubDate>Wed, 19 Sep 2018 14:27:17 +0100</pubDate>
+      
+      <guid>https://tinkr.co.uk/service/website-performance-consultancy/</guid>
+      <description>Digital consultancy can play a key part in the development cycle, especially in the early planning stages. Consultancy can also be beneficial to established projects.
+I&amp;rsquo;ve advised many companies and organisation on the best ways to approach projects and tools and systems to use during the development and for future maintenance.
+It&amp;rsquo;s in this role that I often feel I am most effective on a project.
+As with many years experience working on digital development projects, I can often predict issues that may arise and suggest ways of avoiding them.</description>
+    </item>
+    
+    <item>
+      <title>Digital Development</title>
+      <link>https://tinkr.co.uk/service/digital-development/</link>
+      <pubDate>Wed, 19 Sep 2018 14:24:08 +0100</pubDate>
+      
+      <guid>https://tinkr.co.uk/service/digital-development/</guid>
+      <description>I have many years experience developing website, mobile apps and plugins/modules. Whether you&amp;rsquo;re after a full site or a simple interaction module, I&amp;rsquo;m sure I can help.
+I have been writing html, css &amp;amp; javascript for just over 20 years, so this is partly why I would say I specialise in front end development.
+I also contributed to the html5 specification in 2011 when I was an invited expert on the development work group and have a background in graphic design.</description>
+    </item>
+    
+    <item>
+      <title>Website Performance Optimisation</title>
+      <link>https://tinkr.co.uk/service/optimisation/</link>
+      <pubDate>Wed, 19 Sep 2018 14:03:51 +0100</pubDate>
+      
+      <guid>https://tinkr.co.uk/service/optimisation/</guid>
+      <description>Optimisation can be applied to every aspect of website development and maintenance, including work-flow, testing, front-end and back-end development.
+There was a time when optimisation was rarely thought about.
+We&amp;rsquo;d make our website all singing and dancing and put them online for everyone to enjoy.
+There was also a time when images didn&amp;rsquo;t get a second thought either, but then came Mosaic web browser and suddenly the internet had inline images!</description>
+    </item>
+    
+    <item>
+      <title>Code Review and Audit</title>
+      <link>https://tinkr.co.uk/service/code-review/</link>
+      <pubDate>Mon, 17 Sep 2018 22:51:58 +0100</pubDate>
+      
+      <guid>https://tinkr.co.uk/service/code-review/</guid>
+      <description>If you have a live project that isn&amp;rsquo;t quite performing as expected, I offer remove code review and audit, and can then advise on performance optimisations.
+Code reviews and audits are a quick an inexpensive way of hiring me to help improve your website load time and overall performance.
+This can usually be carried out remotely and takes between 1 and 4 days depending on the complexity of the project.</description>
+    </item>
+    
+  </channel>
+</rss>

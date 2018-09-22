@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <title>Website Performance</title>
+    <link rel="stylesheet" href="/css/main.min.css">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto&#43;Serif&#43;JP:500,700">
+    
+    <meta name="description" content="In this article I’m going to look at improving the perceived load time and reducing the time it takes the end user to be able to interact with the website.  Although website performance as a whole is a much larger subject, these are two of the main issues many websites face.">
+    <link rel="preconnect" href="https://cdn.tinkr.co.uk">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://cdn.tinkr.co.uk">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="amphtml" type="text/html" href="https://tinkr.co.uk/amp/article/website-performance/">
+    <link rel="alternate" type="application/rss&#43;xml" href="https://tinkr.co.uk/article/website-performance/index.xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="//cdn.tinkr.co.uk/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="//cdn.tinkr.co.uk/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="//cdn.tinkr.co.uk/favicon-16x16.png">
+    <link rel="mask-icon" href="//cdn.tinkr.co.uk/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="apple-mobile-web-app-title" content="Tinkr">
+    <meta name="application-name" content="Tinkr">
+    <meta name="msapplication-TileColor" content="#2b5797"> 
+    <meta name="theme-color" content="#327BAF">
+    <link rel="manifest" href="/manifest.json">
+</head>
+
+    <body>
+        <header class="mui-appbar c-menubar">
+    <div class="o-wrapper">
+        <a href="/" class="c-menubar__link"><svg xmlns="http://www.w3.org/2000/svg" class="c-menubar__logo" width="145" height="50" viewBox="0 0 39.688 14.552"><title>Tinkr Website Logo</title><path d="M9.512.192C8.135.207 6.35.673 5.57.82c-.832.156-3.9.416-4.525.26C.42.924.056 1.288.212 1.6c.156.312.676.988 1.404 1.196.728.208 2.289-.208 2.809-.312.52-.104.624.416.624.416s-.156.936-.312 1.457c-.156.52-3.017 8.061-3.017 8.061.052.729.737 1.393 1.279 1.944.618.628 1.47-2.046 1.47-2.046S6.882 5.042 7.18 3.16c.118-.737.625-1.092.625-1.092s2.704 0 3.848.416c1.145.416.729-1.144.625-1.612-.104-.468-1.093-.624-2.497-.676-.088-.003-.178-.004-.27-.003zm15.04.873c-.32 0-.502.38-.73 1.323-.364 1.509-.689 2.377-.845 2.897-.156.52-1.352 3.745-1.716 4.369-.364.624-2.705 3.485-2.705 3.485s-.643.627-1.013-.037c-.555-.812 2.16-4.768 2.16-4.768s1.327-1.483-.055-1.957c-.641-.22-1.144-.624-1.82 0-.676.624-3.12 3.693-3.12 3.693s-.833.312-.52-.26c.311-.572 1.091-2.445 1.091-2.445s.156-.52-.468-.884-1.144-.468-1.248-.104c-.104.364-.75 1.814-1.166 2.438-.416.624-2.731 3.637-2.731 3.637s-1.12 1.167-1.252.166c-.057-.435 1.872-4.733 1.872-4.733s.104-.832-.416-1.248c-.52-.416-.78-.52-1.092-.26L6.54 11.838s-.676 2.185.885 2.185c1.56 0 1.924-.208 2.548-.988.624-.78 1.456-1.769 1.456-1.769l-.156 1.404s-.104.989.78 1.093c.885.104 1.047-.224 1.047-.224s.824-.885 1.041-1.236c.357-.577 3.374-4.262 3.374-4.262s.312-.26-.26.989c-.572 1.248-1.248 2.86-1.248 2.86s-.272 1.007.26 1.56c.892.93 1.508 1.197 2.288.313.78-.885 2.029-2.289 2.029-2.289l-.416 1.144s-.104.78.624 1.197c.728.416 1.144.208 1.404-.572l.624-1.873s.364-.572.624.312c.26.884 1.04 2.237 1.613 2.237.572 0 1.03-.155 2.184-1.093 1.473-1.196 4.169-5.429 4.169-5.429s.707.218.375 1.476c-.626 2.373-1.508 3.668-1.508 3.668s-1.983 1.384.189 1.43c.898.019 1.04 0 1.3-.624.26-.625 1.457-3.797 1.457-3.797S33.432 7.52 34.68 8.3c1.248.78 2.184 1.769 3.017.885.832-.885 1.03-.604 1.3-.677 0 0 1.248-1.3-.052-.988-1.3.312-1.717 1.613-2.757.26-1.04-1.352-1.872-1.768-3.12-1.3-1.249.468-1.473-.84-2.595-.581-2.38.548 1.14.399.497 1.36-.337.504-2.608 4.407-4.313 5.126-1.309.552-1.86-.184-2.12-.964s-.312-1.82.105-1.716c.416.104 1.768.052 2.6-.936.832-.989 1.508-1.873 1.3-2.601-.208-.728-1.092-1.3-2.132-.468-1.04.832-2.08 1.092-1.768.416.312-.676 1.404-3.537 1.404-3.537s.156-.52-.728-1.144c-.332-.234-.574-.37-.766-.37zM10.833 2.331a1.34 1.34 0 0 0-1.119.561s-1.612 1.769.468 2.185c2.08.416 2.08-2.029 1.873-2.289-.124-.154-.65-.455-1.222-.457zM27.2 6.624c.462.016.216.845.216.845s-.617 1.233-1.663 1.38c-1.115.155-.772-.41-.772-.41s.446-.872 1.642-1.6c.262-.16.447-.219.577-.215z" fill="#fff" stroke="#000" stroke-width=".063"/></svg>
+</a>
+        
+
+
+
+
+
+<nav class="c-main-nav">
+    <div class="c-main-nav__toggle">
+        <label for="main-menu" class="c-main-nav__text">menu</label>
+        <input id="main-menu" class="c-main-nav__checkbox" type="checkbox">
+        <span class="c-main-nav__bar"></span>
+        <span class="c-main-nav__bar"></span>
+        <span class="c-main-nav__bar"></span>
+        <ul class="c-main-nav__list">
+            <li class="c-main-nav__item">
+                <a class="c-main-nav__link" href="/">Home</a>
+            </li>
+            <li class="c-main-nav__item">
+                <a class="c-main-nav__link" href="/service/">Services</a>
+            </li>
+            <li class="c-main-nav__item">
+                <a class="c-main-nav__link" href="/about/">About</a>
+            </li>
+            <li class="c-main-nav__item">
+                <a class="c-main-nav__link" href="/article/">Articles</a>
+            </li>
+            <li class="c-main-nav__item">
+                <a class="c-main-nav__link" href="/contact/">Contact</a>
+            </li>
+        </ul>
+        </div>
+</nav>
+
+
+</header>
+
+        <main id="content">
+        
+<article class="o-wrapper c-article">
+  <div class="o-layout o-layout--reverse">
+    
+    <div class="o-layout__item u-1/1  u-1/2@desktop c-article__hero">
+      
+      <img class="c-article__img u-z-shadow--1" src="/img/articles/web-performance.png" />
+    </div>
+    
+    <div class="o-layout__item u-1/1 u-1/2@desktop">
+      <header class="c-article__header">
+        <h1 class="c-article__title">Website Performance</h1>
+        <p class="c-article__excerpt c-article__excerpt--italic">
+          
+            In this article I’m going to look at improving the perceived load time and reducing the time it takes the end user to be able to interact with the website.  Although website performance as a whole is a much larger subject, these are two of the main issues many websites face.
+          
+        </p>
+      </header>
+      
+      <div class="o-media c-article__author">
+        <div class="o-media__img">
+          
+          <img class="c-author__img u-z-shadow--1" src="/img/authors/80dHNPJ7P3vme7tC5po0-small.jpg" />
+        </div>
+        <div class="o-media__body">
+          <div class="c-author__name">Pete Stewart</div>
+          <time class="c-article__pubdate" datetime="2018-09-17 13:56:19">17 Sep, 2018</time> 
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+  <div class="o-layout o-layout--center">
+    <div class="o-layout__item u-1/1 u-2/3@desktop c-article__body">
+      
+
+<p>For more information on the impact load time can have on overall website performance, take a look at the following infographic created by skilled.co:
+<a href="https://skilled.co/wp-content/uploads/2016/11/Website-speed_Infographic_Skilled_Final.jpg">https://skilled.co/wp-content/uploads/2016/11/Website-speed_Infographic_Skilled_Final.jpg</a></p>
+
+<p>How long it takes for a website to load or at least for the user to perceive it has loaded, and for them to be able to use the site, comes down to a few basic factors:</p>
+
+<ul>
+<li>Assets (the content and the code that defines the style and functionality of the site)</li>
+<li>Rendering (how this code is generated, whether that be dynamically or statically)</li>
+<li>Delivery (where this code is coming from and how it is being sent)</li>
+</ul>
+
+<h2 id="asset-development">Asset Development</h2>
+
+<p>Optimisation of website assets is often the largest issue when looking at website performance.<br />
+According to http archive the average page weight is 1200 - 1500 KB, comprising of  67 - 75 requests, where  ~30 of these requests are JS, CSS &amp; fonts (400 KB,  50 KB &amp; 90 KB respectively).</p>
+
+<h3 id="javascript">Javascript</h3>
+
+<p>Hand crafting Javascript rather than using a number of libraries and plugins should really help here.  I often see web pages loading 20 - 30 Javascript files, when the page is actually only using one of two of these or about 5% of the total JS code.</p>
+
+<p>I also highly recommend moving interaction animations to CSS as they are often smoother and more reliable.  Doing so should also reduce user interaction lag, as JS is not being processed to create the animation.</p>
+
+<p>Once javascript bloat is no longer an issue, you can then look at optimising the JS itself to reduce the processing time and ultimately the time to interaction.</p>
+
+<h3 id="css">CSS</h3>
+
+<p>Using well established methodologies such as BEM &amp; SMACSS when writing CSS can really help to improve performance and reduce file size.  Writing your CSS in an order of specificity should help to reduce unnecessarily overriding style and therefore also reduce required CSS.  Start writing CSS with the least specific selectors, such as elements, and then work up to the most specific selectors, such as a class modifier.</p>
+
+<h5 id="css-example">CSS Example:</h5>
+
+<pre><code class="language-css">p {
+      Font-size: 16px;
+      Color: #333;
+}
+
+.c-services__body {
+  Margin: 10px;
+}
+
+.c-services__body--bold {
+  Font-weight: bold;
+}
+</code></pre>
+
+<h5 id="html-example">html Example:</h5>
+
+<pre><code class="language-html">&lt;p class=&quot;c-services__body c-services__body--bold&quot;&gt;
+  Bold service body text
+&lt;/p&gt;
+</code></pre>
+
+<p>In this example the CSS is relatively flat, so the order is the main specificity factor and there is complete inheritance with each following class.</p>
+
+<h3 id="fonts">Fonts</h3>
+
+<p>You can often reduce fonts that are needed by using SVGs for icons and perhaps variable fonts if suitable.</p>
+
+<h3 id="images">Images</h3>
+
+<p>Images have often been an issue discussed when website performance is concerned.  These days WebP image format is pretty well supported and can be set to have a JPEG/PNG fallback by using the html5 picture element. Studies show that WebP gives additional 25%-34% compression gains compared to JPEG. So it’s definitely worth using when we consider images are ⅓ of the bytes transferred for an average web page.</p>
+
+<p>Combining well compressed images with lazy loading, can hugely improve page load time.  Lazy loading can be achieved with some simple javascript, and soon may even be a built-in feature for Chrome if not other browsers.</p>
+
+<h3 id="development-tools">Development Tools</h3>
+
+<p>It’s always best to combine, compress and optimise your assets during development, rather than on the server.  I recommend using a development tool such as Webpack, Gulp or Grunt to automate these tasks while you’re developing.  It’s also worth considering static compression using Brotli at this stage.</p>
+
+<h2 id="rendering">Rendering</h2>
+
+<p>How the code is rendered will mainly affect the Time To First Byte (TTFB).</p>
+
+<h3 id="dynamic-websites">Dynamic Websites</h3>
+
+<p>Website content is often dynamically rendered using server side languages such as PHP. For many website this isn’t a huge issue, as their rendering code — whether that be a  popular CMS, Framework or custom code — is well optimised and the TTFB is respectable.
+I have however come across website that have a Time To First Byte that is over the 2 seconds we’re aiming to have the whole site loaded within.</p>
+
+<p>If it is essential to render dynamically, then optimising the process with server caching, and making sure the code and the server are running as expected should help.</p>
+
+<p>There is a lot that can be done to improve dynamic rendering, but if it’s not essential, not much can beat static, pre rendered html and assets!
+Static Site Generators
+There are many modern static site generators that can often be used instead of dynamic code.  Using pre rendered html can hugely improve server response time and can also reduce server costs.  There are many benefits to gain from using static code, but it doesn’t suit every website.</p>
+
+<h2 id="delivery">Delivery</h2>
+
+<p>How the website and its assets are delivered can make the world of difference.  If you’re serving your site from a single shared server miles away from the majority of your users, then it’s probably going to take a while to get to them.</p>
+
+<h3 id="content-display-networks-cdn">Content Display Networks (CDN)</h3>
+
+<p>If on the other hand you are serving your website through a Content Display Network (CDN) that has many servers all over the world and can deliver the assets from the nearest one to each user, then it should be much quicker.</p>
+
+<p>Delivery isn’t just to do with where your content is coming from, though.  It’s also important what technology is being used to get it there.</p>
+
+<h3 id="https-http-2">HTTPS &amp; HTTP/2</h3>
+
+<p>Running your website over https doesn’t only make your website much more secure for yourself and it’s users, it also allow you to use http/2.</p>
+
+<p>http/2 enables Multiplexing, which basically mean many of your assets can be requested at the same time, rather than one after the other.  This can often half the load time of a website!</p>
+
+<h3 id="ssl-tls-cipher-caching">SSL/TLS Cipher &amp; Caching</h3>
+
+<p>To enable https you used to need an SSL (Secure Sockets Layer) Certificate.  This has now been superseded by TLS (Transport Layer Security) Certificates.  There are many cipher that can be used with both SSL &amp; TLS, some are more secure and also faster.
+The connection parameters can also be cached to reduce overheads.</p>
+
+<h3 id="compression">Compression</h3>
+
+<p>There are two main compression types to look at, gzip &amp; brotli.  Gzip is usually faster at on-the-fly compression, whereas brotli will usually give a much smaller file size for the same end quality of compressed assets.  You can compress assets during development  using brotli, and then serve them without the need for on-the-fly compression.
+However, if your website is mainly dynamically generating content and assets, this might not suit you, and gzip may be better.</p>
+
+<h3 id="hardware">Hardware</h3>
+
+<p>It’s relatively standard to be able to get a server that is using Solid State Disks these days, along with fast RAM, Processors and Network connections.  It’s always worthwhile spending a little more to get a server that is the correct specification for your needs.</p>
+
+<h2 id="in-summary">In Summary</h2>
+
+<p>When looking at the load performance of a website, we should be aiming to have the website usable within 2 seconds, otherwise we will see a significant drop off of users, which could cause long term damage to the website user base.</p>
+
+<p>Careful thought when it comes to the architecture of the code can reduce assets bloat and improve overall performance.</p>
+
+<p>Choosing the right tool for the job can also bring great improvements when we’re looking at website load time and TTFB, so make sure this is properly explored.</p>
+
+<p>How the content and assets are served can make a huge difference, so make sure you’re using the latests technology and adequate hardware.</p>
+
+<p>I’ll be writing more detailed articles on each of these topics in the future.</p>
+
+    </div>
+  </div>
+</article>
+
+        </main>
+        
+            <footer class="c-footer">
+</footer>
+
+        
+    </body>
+</html>

@@ -1,0 +1,18 @@
+{{ define "description" }}
+	test
+{{ end }}
+
+{{ define "main" }}
+<div class="o-wrapper">
+    <section class="o-layout">
+        <article class="o-layout__item u-1/1  u-2/3@desktop c-article">
+            <h1>{{ .Title }}</h1>
+            {{ .Content }}
+        </article>
+        <aside class="o-layout__item u-1/1 u-1/3@desktop sidebar sidebar--right c-article__sidebar">
+            <h4>Services</h4>
+            {{ partial "menu_recursive.html" (dict "menu" .Site.Menus.service "page" . "site" .Site "class" "c-services-nav" "toggle" false) }}
+        </aside>
+    </section>
+</div>
+{{ end }}

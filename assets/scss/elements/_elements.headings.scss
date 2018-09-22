@@ -1,0 +1,21 @@
+h1, h2, h4 {
+    font-weight: 400;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    line-height: 1.25;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 500;
+  font-style: italic;
+  color: #327baf;
+}
+
+h2 {
+    @extend .u-color--orange;
+}
+
+h4, h3 {
+    margin: 5px 0;
+}

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://tinkr.co.uk/article/the-importance-of-documentation/</loc>
+    <lastmod>2018-09-22T08:06:03+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tinkr.co.uk/service/responsive-design/</loc>
+    <lastmod>2018-09-19T14:29:04+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tinkr.co.uk/service/website-performance-consultancy/</loc>
+    <lastmod>2018-09-19T14:27:17+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tinkr.co.uk/service/digital-development/</loc>
+    <lastmod>2018-09-19T14:24:08+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tinkr.co.uk/service/optimisation/</loc>
+    <lastmod>2018-09-19T14:03:51+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tinkr.co.uk/service/code-review/</loc>
+    <lastmod>2018-09-17T22:51:58+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tinkr.co.uk/article/website-performance/</loc>
+    <lastmod>2018-09-17T13:56:19+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tinkr.co.uk/article/</loc>
+    <lastmod>2018-09-22T08:06:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tinkr.co.uk/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tinkr.co.uk/service/</loc>
+    <lastmod>2018-09-19T14:29:04+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tinkr.co.uk/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tinkr.co.uk/</loc>
+    <lastmod>2018-09-22T08:06:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tinkr.co.uk/tags/web-perf/</loc>
+    <lastmod>2018-09-17T13:56:19+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

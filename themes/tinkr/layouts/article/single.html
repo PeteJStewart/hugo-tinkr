@@ -1,0 +1,45 @@
+{{ define "description" }}
+test
+{{ end }}
+
+{{ define "main" }}
+<article class="o-wrapper c-article">
+  <div class="o-layout o-layout--reverse">
+    {{ with .Params.image.src }}
+    <div class="o-layout__item u-1/1  u-1/2@desktop c-article__hero">
+      <!-- Picture image goes here with class: c-article__img u-z-shadow\-\-1 -->
+      <img class="c-article__img u-z-shadow--1" src="{{ . }}" />
+    </div>
+    {{ end }}
+    <div class="o-layout__item u-1/1{{ with .Params.image.src }} u-1/2@desktop{{ end }}">
+      <header class="c-article__header">
+        <h1 class="c-article__title">{{ .Title }}</h1>
+        <p class="c-article__excerpt c-article__excerpt--italic">
+          {{ with .Param "description" }}
+            {{ . }}
+          {{ else }}
+            {{ .Summary }}
+          {{ end }}
+        </p>
+      </header>
+      {{ with .Param "author" }}
+      <div class="o-media c-article__author">
+        <div class="o-media__img">
+          <!-- Auther picture image goes here with class: c-author__img u-z-shadow\-\-1 -->
+          <img class="c-author__img u-z-shadow--1" src="{{ .image }}" />
+        </div>
+        <div class="o-media__body">
+          <div class="c-author__name">{{ .name }}</div>
+          <time class="c-article__pubdate" datetime="{{ $.Page.PublishDate.Format "2006-01-02 15:04:05" }}">{{ $.Page.PublishDate.Format "02 Jan, 2006" }}</time> 
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div> 
+  <div class="o-layout o-layout--center">
+    <div class="o-layout__item u-1/1 u-2/3@desktop c-article__body">
+      {{ .Content }}
+    </div>
+  </div>
+</article>
+{{ end }}

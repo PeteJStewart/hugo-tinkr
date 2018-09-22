@@ -1,0 +1,19 @@
+p, time, i {
+    color: mui-color('black-alpha-54');
+}
+
+a {
+    color: $mui-primary-color;
+}
+
+blockquote {
+    border-left: 4px solid $mui-primary-color-light;
+    font-style: italic;
+	padding-left: 0.75em;
+    margin-left: -1em;
+    margin-right: 1em;
+}
+
+pre {
+  overflow: auto;
+}

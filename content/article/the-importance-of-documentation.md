@@ -45,14 +45,14 @@ In the real world, this is usually not the case.  Developers all have different 
 
 For these reasons alone, documentation is important.  But there are also a number of other important reasons why we should consider writing documentation.  Following I’ll go through a few of these reasons and discuss the impact some of them can have on the performance of a project.
 
-Content
+## Content
 
-Ease of collaboration
-Speed of development
-Reduction of errors
-Reduction of repetition and bloat
-Increased reusability
-Increased performance
+* Ease of collaboration
+* Speed of development
+* Reduction of errors
+* Reduction of repetition and bloat
+* Increased reusability
+* Increased performance
 
 Ease of collaboration
 

@@ -22,6 +22,28 @@ In the real world, this is usually not the case. Developers all have different l
     </item>
     
     <item>
+      <title>Contact Me</title>
+      <link>https://tinkr.co.uk/contact/</link>
+      <pubDate>Sat, 22 Sep 2018 07:38:45 +0100</pubDate>
+      
+      <guid>https://tinkr.co.uk/contact/</guid>
+      <description>Hi, my name is Pete Stewart, if you want to get in touch about a project, please send me an email: hey@tinkr.co.uk
+Otherwise you can find me on Twitter @pj_stew, Linkedin, and a few other social networks.
+ For monthly updates from my website about digital development, please join my enews letter!
+Join my enews</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://tinkr.co.uk/about/</link>
+      <pubDate>Fri, 21 Sep 2018 12:15:29 +0100</pubDate>
+      
+      <guid>https://tinkr.co.uk/about/</guid>
+      <description>Hi there, my name&amp;rsquo;s Pete Stewart; I am a digital developer and consultant. I specialise in website optimisation, front-end development, UX &amp;amp; UI design and MVC development, predominantly using PHP.
+What I do I mainly work with charities and NGOs to improve digital performance and user experience. I use my expertise to optimise websites so your site users don’t need to spend extra time navigating to the content they’re after.</description>
+    </item>
+    
+    <item>
       <title>Responsive Design</title>
       <link>https://tinkr.co.uk/service/responsive-design/</link>
       <pubDate>Wed, 19 Sep 2018 14:29:04 +0100</pubDate>

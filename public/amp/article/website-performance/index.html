@@ -119,7 +119,7 @@
 <h2 id="asset-development">Asset Development</h2>
 
 <p>Optimisation of website assets is often the largest issue when looking at website performance.<br />
-According to http archive the average page weight is 1200 - 1500 KB, comprising of  67 - 75 requests, where  ~30 of these requests are JS, CSS &amp; fonts (400 KB,  50 KB &amp; 90 KB respectively).</p>
+According to <a href="http://httparchive.org/reports/page-weight?start=2017_08_15&amp;end=latest&amp;view=list" title="HTTP Archive">http archive</a> the average page weight is 1200 - 1500 KB, comprising of  67 - 75 requests, where  ~30 of these requests are JS, CSS &amp; fonts (400 KB,  50 KB &amp; 90 KB respectively).</p>
 
 <h3 id="javascript">Javascript</h3>
 
@@ -164,13 +164,13 @@ According to http archive the average page weight is 1200 - 1500 KB, comprising 
 
 <h3 id="images">Images</h3>
 
-<p>Images have often been an issue discussed when website performance is concerned.  These days WebP image format is pretty well supported and can be set to have a JPEG/PNG fallback by using the html5 picture element. Studies show that WebP gives additional 25%-34% compression gains compared to JPEG. So it’s definitely worth using when we consider images are ⅓ of the bytes transferred for an average web page.</p>
+<p>Images have often been an issue discussed when website performance is concerned.  These days WebP image format is pretty well supported and can be set to have a JPEG/PNG fallback by using the html5 picture element. <a href="https://developers.google.com/speed/webp/docs/webp_study" title="WebP Study">Studies show that WebP gives additional 25%-34% compression gains compared to JPEG</a>. So it’s definitely worth using when we consider images are ⅓ of the bytes transferred for an average web page.</p>
 
-<p>Combining well compressed images with lazy loading, can hugely improve page load time.  Lazy loading can be achieved with some simple javascript, and soon may even be a built-in feature for Chrome if not other browsers.</p>
+<p>Combining well compressed images with lazy loading, can hugely improve page load time.  <a href="https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/" title="Simple Javascript Lazyloading">Lazy loading can be achieved with some simple javascript</a>, and soon may even be a built-in feature for Chrome if not other browsers.</p>
 
 <h3 id="development-tools">Development Tools</h3>
 
-<p>It’s always best to combine, compress and optimise your assets during development, rather than on the server.  I recommend using a development tool such as Webpack, Gulp or Grunt to automate these tasks while you’re developing.  It’s also worth considering static compression using Brotli at this stage.</p>
+<p>It’s always best to combine, compress and optimise your assets during development, rather than on the server.  I recommend using a development tool such as <a href="https://webpack.js.org/" title="Webpack">Webpack</a>, <a href="https://gulpjs.com/" title="Gulp">Gulp</a> or <a href="https://gruntjs.com/" title="Grunt">Grunt</a> to automate these tasks while you’re developing.  It’s also worth considering <a href="https://css-tricks.com/brotli-static-compression/" title="Static Brotli Compression">static compression using Brotli</a> at this stage.</p>
 
 <h2 id="rendering">Rendering</h2>
 
